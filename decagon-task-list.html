@@ -1,0 +1,120 @@
+<!-- Task 1 -->
+
+You are hosting a tennis tournament. P players, who will take part in the first round of this tournament, 
+are already registered and you have reserved C tennis courts for the matches. Exactly two players play in each 
+game and only one game can be played on each court at any given time. You want to host the maximum possible number 
+of games starting at the same time (in order to finish the first round quickly).
+
+How many games can be hosted in parallel simultaneously?
+
+Write a function:
+
+function solution(P, C);
+
+that, given the number of players P and the number of reserved courts C, returns the maximum number of games that 
+can be played in parallel.
+...
+
+For example, given P = 5 players and C = 3 available courts, the function should return 2, as two games can 
+be played simultaneously (for instance, the first and second players can play on the first court, and the third
+ and fourth players on the second court, and the third court will be empty because the fifth player doesn't have
+  a partner to play with).
+
+Given P = 10 players and C = 3 courts, the function should return 3, as at most three games can be hosted in
+ parallel.
+
+Assume that:
+
+P and C are integers within the range [1..30,000].
+In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
+
+<!-- Task 2 -->
+Given an array of strings, return a Map<String, Integer> containing a key for every different string in the array,
+ and the value is that string's length.
+
+
+wordLen(["a", "bb", "a", "bb"]) → {"bb": 2, "a": 1}
+wordLen(["this", "and", "that", "and"]) → {"that": 4, "and": 3, "this": 4}
+wordLen(["code", "code", "code", "bug"]) → {"code": 4, "bug": 3}
+
+<!-- Task 3 -->
+The classic word-count algorithm: given an array of strings, return a Map<String, Integer> with a key for each
+ different string, with the value the number of times that string appears in the array.
+
+
+wordCount(["a", "b", "a", "c", "b"]) → {"a": 2, "b": 2, "c": 1}
+wordCount(["c", "b", "a"]) → {"a": 1, "b": 1, "c": 1}
+wordCount(["c", "c", "c", "c"]) → {"c": 4}
+
+<!-- Task 4 -->
+Write a lab to test the binary search algorithm.
+
+Using the binary search algorithm, check if a given number is in a given sorted array of numbers.
+
+Given the sorted array [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]  and any number, the program
+should return the following:
+
+(1) If it finds the number in the array,
+ =>The index of the number in the array
+ =>The number of iterations taken for the algorithm to find the number
+
+(2) If the number is not in the array,
+ =>-1 for the index
+ =>The number of iterations taken for the algorithm to find the number
+
+The return format should be a JavaScript object of the form shown below
+
+{
+    "index" : index of the number in the array,
+    "count" : number of iterations taken to find the number
+}
+For example
+binarySearch([0, 5, 10, 15, 20, 22, 30, 35, 40], 15) → {index: 3, count: 3}
+binarySearch([0, 5, 10, 15, 20, 22, 30, 35, 40], 11) → {index: -1, count: 4}
+
+
+<!-- Task 5 -->
+Given a non-empty array, if there is a place to split the array so that the sum of the numbers on one
+side is equal to the sum of the numbers on the other side return the length of the two arrays as an array but
+if there is no place to split the array, return -1
+
+
+canBalance([1, 1, 1, 2, 1]) → [3,2]
+canBalance([2, 1, 1, 2, 1]) → -1
+canBalance([10, 10]) → [1,1]
+
+<!-- Task 6 -->
+Write a lab to test the binary search algorithm for occurance of an item.
+
+Using the binary search algorithm, check if a given number is in a given sorted array of numbers.
+
+Given the sorted array [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]  and any number, the program
+should return the following:
+
+(1) If it finds the number in the array,
+ =>The number of occurance of the number in the array
+ =>The number of iterations taken for the algorithm to find the number
+
+(2) If the number is not in the array,
+ =>-1 for the occurance
+ =>The number of iterations taken for the algorithm to find the number
+
+The return format should be a JavaScript object of the form shown below
+
+{
+    "occurance" : number of occurance of the number in the array,
+    "count" : number of iterations taken to find the number
+}
+For example
+binarySearch([0, 5, 10, 15, 20, 22, 30, 35, 40], 15) → {occurance: 1, count: 2}
+binarySearch([0, 5, 10, 15, 20, 22, 30, 35, 40], 11) → {occurance: -1, count: 3}
+
+
+<!-- Task 7 -->
+
+Given a non-empty string like "Code" return a string like "CCoCodCode".
+
+
+stringSplosion("Code") → "CCoCodCode"
+stringSplosion("abc") → "aababc"
+stringSplosion("ab") → "aab"
